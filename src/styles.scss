@@ -1,0 +1,52 @@
+html, body, #root {
+  height: 100vh;
+}
+
+.App {
+  height: 100%;
+  font-family: sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.error {
+  color: #441155;
+  border: 3px solid #700b70;
+  border-radius: 5px;
+  text-shadow: 1px 1px 2px #441055;
+  font-weight: bold;
+  width: 100%;
+}
+
+.nav_ul {
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 5em;
+  & li {
+    width: 100%;
+    & > a {
+      display: block;
+      border-bottom: 2px solid #441155;
+      color: #3f0f0f;
+      transition: background-color 0.5s ease, color 0.75s ease-in-out;
+      &:hover {
+        background: #3f0f0f;
+        color: #fff;
+      }
+      &:focus, &:hover, &:visited, &:link, &:active {
+        text-decoration: none;
+      }
+    } 
+  }
+  & .active-tab {
+    border: 3px solid #9e0634;
+    // border-bottom: none;
+  }
+}
+
+
+
+
