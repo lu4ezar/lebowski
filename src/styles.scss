@@ -27,24 +27,26 @@ html, body, #root {
   gap: 5em;
   & li {
     width: 100%;
-    & > a {
-      display: block;
+    & a {
+      display: flex;
       border-bottom: 2px solid #441155;
       color: #3f0f0f;
-      transition: background-color 0.5s ease, color 0.75s ease-in-out;
+      transition: background-color 0.25s ease, color 0.5s ease;
+      &.active-tab {
+        background: #9e0634;
+        color: #fff;
+      }
       &:hover {
-        background: #3f0f0f;
+        background: #e92a2a;
         color: #fff;
       }
       &:focus, &:hover, &:visited, &:link, &:active {
         text-decoration: none;
       }
+      
     } 
   }
-  & .active-tab {
-    border: 3px solid #9e0634;
-    // border-bottom: none;
-  }
+ 
 }
 
 

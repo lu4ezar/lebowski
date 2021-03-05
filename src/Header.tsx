@@ -1,18 +1,22 @@
+import Login from "./Login";
 import Navbar from "./Navbar";
 import "./styles.scss";
 
 const Header = () => {
   return (
-    <header
-      style={{
-        display: "flex",
-        border: "1px solid black",
-        flex: 1
-      }}
-    >
-      <h1>Lebowski</h1>
-      <Navbar />
-      {/* <select
+    <div>
+      <header
+        style={{
+          display: "flex",
+          border: "1px solid black",
+          justifyContent: "space-around",
+          alignItems: "center"
+        }}
+      >
+        <h1>Lebowski</h1>
+        <Navbar />
+        <Login />
+        {/* <select
           style={{
             alignSelf: "center",
             marginLeft: "auto"
@@ -22,7 +26,8 @@ const Header = () => {
           <option value="en">English</option>
           <option value="ru">Русский</option>
         </select> */}
-    </header>
+      </header>
+    </div>
   );
 };
 

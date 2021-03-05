@@ -1,12 +1,29 @@
 import React from "react";
-import { Route, BrowserRouter, Switch, Link } from "react-router-dom";
-// import Home from "./Home";
-// import Table from "./Table";
-// import Charts from "./Charts";
+import { NavLink } from "react-router-dom";
 import "./styles.scss";
 
 const Navbar = () => {
-  return <div>NAVBAR</div>;
+  return (
+    <nav>
+      <ul className="nav_ul">
+        <li className="nav_link">
+          <NavLink exact to="/" activeClassName="active-tab">
+            Home
+          </NavLink>
+        </li>
+        <li className="nav_link">
+          <NavLink to="/table" activeClassName="active-tab">
+            Table
+          </NavLink>
+        </li>
+        <li className="nav_link">
+          <NavLink to="/charts" activeClassName="active-tab">
+            Charts
+          </NavLink>
+        </li>
+      </ul>
+    </nav>
+  );
 };
 
 export default Navbar;
