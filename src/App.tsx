@@ -9,7 +9,7 @@ export default function App() {
       <Header />
       <div
         style={{
-          display: "flex"
+          flex: 1
         }}
       >
         <Router />
