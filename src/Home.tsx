@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Scanner from "./Scanner";
 import Form from "./Form";
+import RadioGroup from "./RadioGroup";
 
-enum Mode {
+export enum Mode {
   Scan = "scan",
   Manual = "manual",
   Upload = "upload"
@@ -16,7 +17,8 @@ const Home = () => {
   return (
     <>
       <div>
-        <input
+        <RadioGroup onChange={handleChange} mode={mode as Mode} />
+        {/* <input
           type="radio"
           id="scan"
           name="mode"
@@ -44,7 +46,7 @@ const Home = () => {
           checked={mode === "upload"}
           onChange={handleChange}
         />
-        <label htmlFor="upload">Upload image</label>
+        <label htmlFor="upload">Upload image</label> */}
       </div>
       {mode === "scan" && <Scanner />}
       {mode === "manual" && <Form />}

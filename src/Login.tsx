@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useGoogleLogin, useGoogleLogout } from "react-google-login";
+import { AiOutlineGoogle } from "react-icons/ai";
+import "./styles.scss";
 
 const Login = () => {
   const clientId = process.env.CLIENT_ID as string;
@@ -15,9 +17,15 @@ const Login = () => {
     onFailure: () => console.log("Error")
   });
   return isSignedIn ? (
-    <button onClick={signIn}>Sign In</button>
+    <button onClick={signIn} className="login-button sign-in">
+      <AiOutlineGoogle />
+      Sign In
+    </button>
   ) : (
-    <button onClick={signOut}>Sign Out</button>
+    <button onClick={signOut} className="login-button sign-out">
+      <AiOutlineGoogle />
+      Sign Out
+    </button>
   );
 };
 
