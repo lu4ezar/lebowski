@@ -18,7 +18,10 @@ const Form = () => {
           totalPrice: ""
         }}
         validationSchema={schema}
-        onSubmit={() => console.log("submitted: ")}
+        onSubmit={(values, { setSubmitting }) => {
+          console.log("submitted: ", values);
+          setSubmitting(false);
+        }}
       >
         {({ isSubmitting }) => (
           <FForm>
