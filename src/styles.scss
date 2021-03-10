@@ -1,0 +1,116 @@
+html, body, #root {
+  height: 100vh;
+}
+
+.App {
+  height: 100%;
+  font-family: sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.error {
+  color: #441155;
+  border: 3px solid #700b70;
+  border-radius: 5px;
+  text-shadow: 1px 1px 2px #441055;
+  font-weight: bold;
+  width: 100%;
+}
+
+.nav_ul {
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 5em;
+  & li {
+    & a {
+      display: flex;
+      border-bottom: 2px solid #441155;
+      color: #3f0f0f;
+      transition: background-color 0.25s ease, color 0.5s ease;
+      &.active-tab {
+        background: #9e0634;
+        color: #fff;
+      }
+      &:hover {
+        background: #e92a2a;
+        color: #fff;
+      }
+      &:focus, &:hover, &:visited, &:link, &:active {
+        text-decoration: none;
+      }
+      
+    } 
+  }
+}
+
+.login-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1s ease;
+  &__sign-in {
+    transform: rotateX(45deg);
+  }
+  &__sign-out {
+    transform: rotateX(45deg);
+  }
+}
+
+.radio-buttons-wrapper {
+  margin: 10px;
+  & input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+    &:focus + label {
+      border: 2px dashed #444;
+    }
+    &:checked + label {
+      background-color: #bfb;
+      border-color: #4c4;
+    }
+  }
+  & label {
+    display: inline-block;
+    background-color: #ddd;
+    padding: 10px 20px;
+    font-family: sans-serif, Arial;
+    font-size: 16px;
+    border: 2px solid #444;
+    border-radius: 4px;
+    &:hover {
+      background-color: #dfd;
+    }
+  }
+}
+
+.radio-button {
+  & + label {
+    float: left;
+    padding: .5em 1em;
+    cursor: pointer;
+    border: 1px solid #28608f;
+    margin-right: -1px;
+    color: #fff;
+    background-color: #428bca;
+    &:first-of-type {
+      border-radius: .7em 0 0 .7em;
+    }
+    &:last-of-type {
+      border-radius: 0 .7em .7em 0;
+    }
+  }
+  &:checked + label {
+    background-color: #3277b3;
+  }
+}
+
+
+
+
